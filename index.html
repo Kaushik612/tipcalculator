@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <!--Main Container-->
+  <div class="app__container">
+    <div class="tip__container">
+      <div class="tip__header">
+        <p>SPLI</p>
+        <p>TTER</p>
+      </div>
+      <div class="calculator__container">
+          <div class="left__container">
+                <form action="#" class="calculator__form" onsubmit="event.preventDefault();">
+                  <div class="form-group">
+                    <label for="bill">Bill</label>
+                    <div class="input">
+                      <span><img src="images/icon-dollar.svg" alt="dollar" class="person"/></span>
+                      <input type="number" class="bill" id="bill" name="bill" placeholder="0"/>
+                    </div>               
+                  </div>
+                  <div class="form-group">
+                    <label for="tip">Select Tip %</label>
+                    <div class="tip__grid" id="tip_btns">
+                      <button class="tip" name="tip">5%</button>
+                      <button class="tip" name="tip">10%</button>
+                      <button class="tip" name="tip">15%</button>
+                      <button class="tip" name="tip">25%</button>
+                      <button class="tip" name="tip">50%</button>
+                      <input type="number" class="custom" id="custom" placeholder="Custom"/>
+                    </div>              
+                  </div>
+                  <div class="form-group">
+                    <label for="people">Number of People</label>
+                    <div class="input">
+                    <span><img src="images/icon-person.svg" alt="person" class="person"/></span>
+                    <!-- <span><i class="fas fa-user fa-xs"></i></span> -->
+                    <input type="number" id="people" class="people" name="people" placeholder="0"/>
+                    </div>
+                  </div>
+              </form>
+          </div>
+          <div class="right__container">
+              <div class="display">
+                  <div class="wrapper">
+                      <div class="labels">
+                        <p>Tip Amount</p>
+                        <span>/ person</span>
+                      </div>
+                      <div class="tip__amount">
+                          <h1 id="perperson">$0.00</h1>
+                      </div>
+                  </div>
+
+                  <div class="wrapper">
+                    <div class="labels">
+                      <p>Total</p>
+                      <span>/ person</span>
+                    </div>
+                    <div class="tip__amount">
+                        <h1 id="total">$0.00</h1>
+                    </div>
+                  </div>
+              </div>
+              <div class="reset">
+                <button id="reset" disabled>RESET</button>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
